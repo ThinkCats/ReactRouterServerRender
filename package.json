@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "babel-node app.js",
-    "dev": "babel-watch app.js"
+    "dev": "babel-watch app.js",
+    "build": "babel src --out-dir dist"
   }
 }
