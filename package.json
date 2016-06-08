@@ -18,9 +18,8 @@
     "swig": "^1.4.2"
   },
   "scripts": {
-    "babel-node": "babel-node src/app.js",
-    "start" :"nodemon src/app.js --exec babel-node --presets es2015",
-    "dev": "babel-watch src/app.js",
+    "dev" :"nodemon src/app.js --exec babel-node --presets es2015",
+    "start": "node dist/app.js",
     "build": "babel src --out-dir dist"
   }
 }

@@ -2,13 +2,17 @@
 React Router Server Render
 
 ### run
+build
+```
+npm run build
+```
 
- (using babel-node)
+ start
 ```
 npm run start
 ```
 
- (using babel-watch)
+ (using nodemon and babel-node)
 ```
 npm run dev
 ``
