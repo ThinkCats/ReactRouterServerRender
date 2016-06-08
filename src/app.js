@@ -21,7 +21,7 @@ app.use((req,res) => {
          res.redirect(302, redirectLocation.pathname + redirectLocation.search)
       } else if (renderProps) {
          var html = ReactDOM.renderToString(React.createElement(RouterContext, renderProps));
-         var page = swig.renderFile('template/index.html',{html:html});
+         var page = swig.renderFile('./template/index.html',{html:html});
          res.status(200).send(page);
       } else {
          res.status(404).send('Not found')
