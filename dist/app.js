@@ -25,9 +25,11 @@ require('babel-core/register')({
    presets: ['es2015', 'react']
 });
 
-var route = require('./view/route'); //注意这一段怪怪的引用
+var route = require('./src/view/route'); //注意这一段怪怪的引用
 
 var app = (0, _express2.default)();
+
+app.use(_express2.default.static('public/resources'));
 
 //服务端渲染
 app.use(function (req, res) {
@@ -38,7 +40,7 @@ app.use(function (req, res) {
          res.redirect(302, redirectLocation.pathname + redirectLocation.search);
       } else if (renderProps) {
          var html = _server2.default.renderToString(_react2.default.createElement(_reactRouter.RouterContext, renderProps));
-         var page = _swig2.default.renderFile('template/index.html', { html: html });
+         var page = _swig2.default.renderFile('./public/index.html', { html: html });
          res.status(200).send(page);
       } else {
          res.status(404).send('Not found');

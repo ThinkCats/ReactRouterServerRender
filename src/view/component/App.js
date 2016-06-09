@@ -4,7 +4,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                This is a react head?<br/>
+                <span className="header">This is a react head?</span><br/>
                 {this.props.children}
                 This is footer!
             </div>

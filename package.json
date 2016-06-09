@@ -12,14 +12,18 @@
   },
   "dependencies": {
     "express": "^4.13.4",
+    "path": "^0.12.7",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.4.1",
     "swig": "^1.4.2"
   },
   "scripts": {
-    "dev" :"nodemon src/app.js --exec babel-node --presets es2015",
+    "dev": "nodemon app.js --exec babel-node --presets es2015",
     "start": "node dist/app.js",
-    "build": "babel src --out-dir dist"
+    "build": "rm -rf dist && npm run build-js && npm run build-main && npm run copy-res",
+    "copy-res" : "cp -rf public dist",
+    "build-js": "babel src --out-dir dist/src",
+    "build-main" : "babel app.js -o dist/app.js"
   }
 }
