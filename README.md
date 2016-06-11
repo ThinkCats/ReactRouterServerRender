@@ -13,7 +13,7 @@ npm run build
 npm run start
 ```
 
- (using nodemon and babel-node)
+ 开发模式,使用gulp来监控客户端文件变化,nodemon监控服务端变化
 ```
 npm run dev
 ``
