@@ -35,7 +35,7 @@
     "watchify": "^3.7.0"
   },
   "scripts": {
-    "dev": "nodemon app.js --exec babel-node --presets es2015",
+    "dev": "gulp & nodemon app.js --exec babel-node --presets es2015",
     "start": "node dist/app.js",
     "build": "rm -rf dist && gulp build && npm run build-js && npm run build-main && npm run copy-res",
     "copy-res": "cp -rf public dist",
