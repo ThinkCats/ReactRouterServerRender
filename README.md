@@ -3,11 +3,13 @@
 使用ES6语法来写的Node应用,前端使用React + React Router,使用服务端渲染.
 
 ### run
+编译输出目录dist
 build
 ```
 npm run build
 ```
 
+运行启动的是dist目录中的编译后代码,使用原生node
  start
 ```
 npm run start
