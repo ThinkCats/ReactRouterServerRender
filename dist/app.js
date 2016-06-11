@@ -22,7 +22,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Babel 6 Compile
 require('babel-core/register')({
-   presets: ['es2015', 'react']
+   presets: ['es2015', 'stage-1', 'react'],
+   plugins: ["transform-class-properties"]
 });
 
 var route = require('./src/view/route'); //注意这一段怪怪的引用

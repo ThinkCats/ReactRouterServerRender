@@ -1,0 +1,6 @@
+{
+  "name": "React-Router Startup",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}
